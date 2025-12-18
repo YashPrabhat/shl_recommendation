@@ -1,0 +1,38 @@
+# --- Security (CRITICAL) ---
+# Never push your API keys to GitHub
+.env
+.env.local
+
+# --- Python & Virtual Environment ---
+# Ignore the virtual environment folder
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE Settings ---
+# Ignore VS Code and PyCharm settings
+.vscode/
+.idea/
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+# --- Project Specifics ---
+# We generally ignore large datasets, BUT for this assessment:
+# We WANT to push the JSON and Database so the Cloud App works instantly.
+# If you wanted to hide them, you would uncomment the lines below:
+# shl_assessments.json
+# chroma_db/
+# submission.csv
+
+# --- Playwright ---
+# Ignore browser downloads if they were installed locally in the project
+# (Usually they are global, but just in case)
+browser/
+playwright-report/
+test-results/
