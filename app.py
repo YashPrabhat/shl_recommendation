@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # CONFIGURATION
-API_URL = "http://localhost:8000/recommend"
+API_URL = "https://shl-recommendation-pun8.onrender.com"
 
 st.set_page_config(page_title="SHL Assessment Recommender", layout="wide")
 
