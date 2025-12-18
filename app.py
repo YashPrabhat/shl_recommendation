@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # CONFIGURATION
-API_URL = "https://shl-recommendation-pun8.onrender.com"
+API_URL = "https://poutingly-grilled-kirk.ngrok-free.dev/recommend"
 
 st.set_page_config(page_title="SHL Assessment Recommender", layout="wide")
 

@@ -30,3 +30,15 @@ The solution consists of four modular components:
 ## 3. Optimization & Trade-offs
 - **Handling Rate Limits:** The system includes a fallback mechanism. If the Gemini API returns a 429/503 error, the system automatically downgrades to a pure vector search to ensure the API never fails to return a result.
 - **Reproducibility:** A virtual environment and standard `requirements.txt` ensure the code runs on any Linux/Mac/Windows machine without GPU dependencies.
+
+## 4. Evaluation Strategy
+To measure system accuracy and effectiveness as per the requirement (Mean Recall@K), a dedicated evaluation script (`evaluate.py`) is included.
+
+- **Metric:** Mean Recall@10.
+- **Methodology:** 
+    1. The system retrieves recommendations for queries in the validation set.
+    2. It compares the predicted URLs against the Ground Truth URLs.
+    3. The Mean Recall score is calculated to quantify retrieval performance.
+- **Stages Evaluated:**
+    - **Retrieval:** Evaluated via visual inspection of `test_retrieval()` in `vector_store.py`.
+    - **End-to-End:** Evaluated via `evaluate.py` on the final recommended list.
